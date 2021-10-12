@@ -5,7 +5,7 @@
         <ul class="navbar-nav mr-auto">
             <ng-container>
 
-                <div *ngIf="(accountService.currentUser | async) != null; else elseBlock" class="dropdown" style="margin-top: 0.6rem;" dropdown>
+                <div *ngIf="(accountService.currentUser | async) != null; else elseBlock" class="dropdown" style="margin-top: 2rem;" dropdown>
                     <li class="nav-item">
                         <a class="dropdown-toggle text-light ml-2" dropdownToggle routerLinkActive='active'>Movies</a>
                         <div class="dropdown-menu mt-3" *dropdownMenu>
@@ -22,10 +22,10 @@
                 </ng-template>
 
                 <li class="nav-item">
-                    <a class="nav-link" routerLink='/actors' routerLinkActive='active'>Actors</a>
+                    <a class="nav-link" routerLink='/' routerLinkActive='active'>Actors</a>
                 </li>
 
-                <div *ngIf="checkIfUserHasRole()" class="dropdown" style="margin-top: 0.6rem;" dropdown>
+                <div *ngIf="checkIfUserHasRole()" class="dropdown" style="margin-top: 2rem;" dropdown>
                     <li class="nav-item">
                         <a class="dropdown-toggle text-light ml-2" dropdownToggle routerLinkActive='active'>Admin
                             panel</a>
@@ -52,7 +52,7 @@
 
         <div *ngIf="(accountService.currentUser | async) == null">
             <a routerLink="/auth/signin"><button class="btn btn-outline-light mr-4">Sign in</button></a>
-            <a routerLink="/auth/register"><button class="btn btn-outline-light">Register</button></a>
+            <a routerLink="/auth/register"><button class="btn btn-outline-light" style="padding: 1.3rem">Register</button></a>
         </div>
     </div>
 

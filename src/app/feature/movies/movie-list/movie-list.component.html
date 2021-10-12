@@ -7,7 +7,7 @@
         <div class="d-flex flex-row">
             <div class="form-group p-4">
                 <label>Searching for a specific movie? Type in your phrase</label>
-                <input type="search" class="form-control ml-1" name="textualSearch" style="height: 3rem; border: 1px solid black;"
+                <input type="search" class="form-control ml-1" name="textualSearch" style="height: 4rem; border: 1px solid black;"
                     [(ngModel)]="movieSearch.textualSearch" (ngModelChange)="keyPressUp()">
             </div>
 
@@ -24,7 +24,7 @@
 
         <div class="form-group p-4">
             <button class="btn btn-primary mt-3 ml-2" type="submit">Apply Filters</button>
-            <button (click)="resetFilters()" class="btn btn-info mt-3 ml-2" type="submit">Reset
+            <button  class="btn btn-info mt-3 ml-2" type="submit">Reset
                 Filters</button>
         </div>
     </div>
@@ -38,6 +38,6 @@
     </div>
     <button *ngIf="!movieSearch.isTvShow; else elseTvShows" [disabled]="!hasMoreMovies" class="btn btn-primary btn-block" style="margin: 2rem 0;" (click)="loadMoreMovies()">Load more</button>
     <ng-template #elseTvShows>
-        <button [disabled]="!hasMoreShows" class="btn btn-primary btn-block" style="margin: 2rem 0;" (click)="loadMoreShows()">Load more</button>
+        <button [disabled]="false" class="btn btn-primary btn-block text-left" style="margin: 2rem 0;" (click)="loadMoreShows()">Load more</button>
     </ng-template>
 </div>
